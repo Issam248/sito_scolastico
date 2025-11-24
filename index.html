@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>ciaooo</title>
+  <style>
+    body { font-family: Arial; text-align: center; background: #f0f8ff; }
+    #box { width: 150px; height: 150px; background: pink; margin: 20px auto; line-height: 150px; }
+    .highlight { background: yellow; }
+  </style>
+
+  <!-- JS nel head -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("status").textContent = "Pagina caricata 🎉";
+      window.addEventListener("resize", () => {
+        document.getElementById("status").textContent = "Hai ridimensionato la finestra!";
+      });
+    });
+
+    function saluta() {
+      alert("Ciao!😁");
+    }
+  </script>
+
+  <!-- File JS esterno -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1 onclick="saluta()">Benvenuto nel mio sito</h1>
+  <p id="status">In attesa...</p>
+
+  <button id="btn">Cliccami!</button>
+  <span id="counter">0</span>
+
+  <div id="box">BOX</div>
+
+  <input id="input" placeholder="Scrivi qualcosa...">
+  <select id="select">
+    <option value="">--scegli--</option>
+    <option>Pizza</option>
+    <option>Gelato</option>
+  </select>
+
+  <textarea id="area" rows="3" cols="30" placeholder="Scrivi un messaggio"></textarea>
+
+  <form id="form">
+    <button type="submit">Invia</button>
+  </form>
+
+  <footer ondblclick="alert('Hai fatto doppio clic sul footer!')">
+    © 2025 — Footer simpatico
+  </footer>
+</body>
+</html>
